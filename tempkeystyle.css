@@ -1,0 +1,125 @@
+/*
+CSS FOR TEMP KEY
+*/
+#asterisk {
+	color: red;
+	}
+
+body {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	background-color: #e2edff;
+	line-height: 100%;
+	width: 99%;
+	}
+	
+h1, h2, h3 {
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+	}
+	
+h1 {
+	color: navy;
+	font-size: x-large;
+	font-weight: bold;
+		}
+p {
+		font-size: small;
+		color: navy;
+	}
+form div {
+	font-size: small;
+	color: navy;
+	}
+		
+a {
+	font-weight: bold;
+	}
+	
+#form1 {
+	border-radius: 20px;
+	margin-top: 15px;
+	width: 99%;
+	}
+
+#field {
+	border-radius: 20px;
+	border: solid navy 1px;
+	background-image: url(gallery/blob.png);
+	box-shadow: 10px 10px 10px gray, -2px -2px 10px gray;
+	position: absolute;
+	left: 50%;
+	margin-left: -250px;
+	}
+.form_label {
+	font-weight: bold;
+	display: block;
+	width: 300px;
+	float: left;
+	}
+label {
+	font-weight: bold;
+	}
+	
+#tempkeyrequired input, select, textarea {
+	border-radius: 4px;
+	}
+	
+#legend {
+	font-weight: bold;
+	color: navy;
+	}
+#formheader {
+	text-align: center;
+	margin-bottom: 15px;
+	margin-top: 50px;
+	}
+#innerform {
+	margin-left: 20px;
+	margin-right: 10px;
+	}
+#centered {
+	text-align: center;
+	}
+
+#sitebranding  h1{ 
+	font-size: x-large;
+	color: navy;
+	padding: 10px;
+	margin-left: 100px;
+	margin-right: 100px;
+	text-align: center;
+	}
+#submitted {
+	color: navy;
+	font-weight: bold;
+	border: solid navy 2px;
+	border-radius: 6px;
+	margin-top: 50px;
+	padding: 10px;
+	line-height: 140%;
+	background-image: url(blob.png);
+	box-shadow: 10px 10px 10px gray, -2px -2px 10px gray;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	overflow: auto;
+	}
+
+#submit {
+	color: navy;
+	}
+.blockstuff {
+	display: block;
+	width: 250px;
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+	}
+.formfield {
+	color: red;
+	font-weight: bold;
+	margin-left: 20px;
+	}
+
+textarea {
+	white-space: wrap;
+	}

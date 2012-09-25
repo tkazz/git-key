@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html lang="en">
+
+<head>
+<title>Temp Key Request</title>
+<link rel="shortcut icon" href="key2.ico" type="image/x-icon" />
+<meta charset="utf-8"/>
+
+<link href="tempkeystyle.css" rel="stylesheet" type="text/css"/>
+<!---------------jQUERY STUFF------------------>
+<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/start/jquery-ui.css" rel="Stylesheet" />	
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+<!---------------jQUERY STUFF------------------>
+	
+</head>
+
+<body>
+<div id="main">
+
+  <div id="sitebranding">
+<p align="center">For temp keys only.</p>
+ </div><!------------------END OF SITEBRANDING----------------->
+
+<div id="formheader">
+<h1>Temp Key Request</h1>
+</div><!------------END OF FORM HEADER----------------------------->
+<div id="form1">
+<form id="tempkeyrequired" class="tempkey" method="post" action="cgi-bin/tempkeysubmission.py">
+<fieldset id="field">
+<div align="center"><span id="asterisk">*</span>Denotes a required field</div>
+<script>
+	$(function() {
+		$( "#tempkeyrequired" ).validate();
+	});
+	</script>
+
+<!----------------------------------BREAK--------------------------------->
+<div id="innerform">
+<p>
+<label class="form_label" for="email"><span id="asterisk">*</span>Your email address: --------------------</label>
+<span><input class="required" type="text" name="email" id="email" maxlength="50"/></span>
+</p>
+<!-----------------------------------BREAK-------------------------------->
+<p>
+<label class="form_label" for="tsversion"><span id="asterisk">*</span>Version of Timesheet: ------------------</label>
+<select class="required" name="tsversion" id="tsversion">
+	<option selected="selected"></option>
+	<option>7.x</option>
+	<option>8.0</option>
+	<option>8.7</option>
+</select>
+</p>
+<!----------------------------------BREAK--------------------------------->
+<p>
+<label class="form_label" for="customer"><span id="asterisk">*</span>Customer: ------------------------------</label>
+<span><input class="required" type="text" name="customer" id="customer" maxlength="50"/></span>
+</p>
+<!-----------------------------------BREAK-------------------------------->
+<p>
+<label class="form_label" for="operatingsystem"><span id="asterisk">*</span>Operating System: ---------------------</label>
+<select class="required" name="operatingsystem" id="operatingsystem">
+	<option></option>
+	<option>Windows</option>
+	<option>Linux</option>
+</select>
+</p>
+<p>
+<label class="form_label" for="users"><span id="asterisk">*</span>Number of users: -----------------------</label>
+<input class="required" type="text" name="users" id="users"/>
+</p>
+<p>
+<label class="form_label" for="date"><span id="asterisk">*</span>Date license expires: -------------------</label>
+<input class="required" type="text" name="date" id="date">
+</p>
+<p>
+<label class="form_label" for="quickbooks">Quickbooks? -----------------------------</label>
+<input type="checkbox" name="quickbooks" id="quickbooks" value="Yes"/>
+</p>
+<p>
+<label class="form_label" for="msp">Microsoft Project? -----------------------</label>
+<input type="checkbox" name="msp" id="msp" value="Yes"/>
+</p>
+<p>
+<label class="form_label" for="px">ProjectXecute? --------------------------</label>
+<input type="checkbox" name="px" id="px" value="Yes"/>
+</p>
+<p>
+<label class="form_label" for="px">Reportlink? ------------------------------</label>
+<input type="checkbox" name="reportlink" id="reportlink" value="Yes"/>
+</p>
+
+<script>
+	$(function() {
+	$( "#date" ).datepicker({ maxDate: "+90d" });
+	$( "#date" ).datepicker( "option", "showAnim", "fold" );
+	$.datepicker.setDefaults({ dateFormat: 'yy-mm-dd' });
+	$("#date").datepicker();
+	});
+</script>
+
+<p><label for="textarea">Additional comments (900 characters max):</label></p>
+<p>
+<textarea name="textarea" rows="5" cols="52" id="textarea" maxlength="900"></textarea>
+</p>
+<div align="center">
+<p><input id="submit" type="submit" value="Submit Temp Key Request"/></p>
+</div>
+</div><!-------------------END OF INNERFORM--------->
+</fieldset><!------------------END OF FIELDSET------------>
+</form>
+</div><!------------------------END OF FORM1---------->
+</div><!--------------END OF MAIN------------------>
+</body>
+
+</html>
